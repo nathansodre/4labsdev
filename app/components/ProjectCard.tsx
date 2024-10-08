@@ -5,7 +5,6 @@ interface ProjectCardProps {
   title: string;
   description: string;
   image: string;
-  authors: string;
   link: string;
 }
 
@@ -13,7 +12,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   description,
   image,
-  authors,
   link,
 }) => (
   <Card>
@@ -24,9 +22,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </Typography>
       <Typography variant="body2" color="text.secondary">
         {description}
-      </Typography>
-      <Typography variant="body2" color="text.secondary">
-        {authors}
       </Typography>
       <Typography variant="body2" color="text.secondary">
         Saiba mais:{" "}

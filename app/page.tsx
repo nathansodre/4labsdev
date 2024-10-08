@@ -7,15 +7,13 @@ const projectsDev = [
     description:
       "Desde 2019, o Digital Stack Group conduz com maestria a intermediação entre os clientes aos principais jogos de poker no mundo, proporcionando segurança, suporte com vasta experiência e uma ampla variedade de jogos online. Implementado em Next.js e Tailwind.",
     image: "/images/dsg.png",
-    authors: "Autor: Cassio Fachinelli, Nathan Sodré e Adriano Ribeiro.",
     link: "https://digitalstackgroup.com",
   },
   {
     title: "Klik Vapes",
     description:
-      "Klik Vapes vende vapes descartáveis com uma proposta inovadora: dispositivos que podem ser combinados magneticamente para criar novas misturas de sabores. Com 10 opções de sabores e mais de 300 combinações possíveis, ele oferece uma experiência personalizada e interativa para os usuários. Implementado com os frameworks Next.js e Stitches",
+      "Klik Vapes vende vapes descartáveis com uma proposta inovadora: dispositivos que podem ser combinados magneticamente para criar novas misturas de sabores. Com 10 opções de sabores e mais de 300 combinações possíveis, ele oferece uma experiência personalizada e interativa para os usuários. Implementado com os frameworks Next.js e Stitches.",
     image: "/images/klik.png",
-    authors: "Autor: Adriano Ribeiro",
     link: "https://klik-vapes-dev.vercel.app/",
   },
   {
@@ -23,7 +21,6 @@ const projectsDev = [
     description:
       "A Dedicando-se às Relações Humanas é uma empresa de RH que busca entender o propósito dos candidatos, aliando às demandas do mercado de trabalho. Implementado em Angular v14.",
     image: "/images/drhs.png",
-    authors: "Autor: Cassio Fachinelli",
     link: "https://drhs.com.br",
   },
   {
@@ -31,7 +28,6 @@ const projectsDev = [
     description:
       "Este código é uma página web que representa o site da Fantastika, uma pet shop. A página foi desenvolvida utilizando tecnologias web padrão, como HTML e CSS.",
     image: "/images/fantastika.png",
-    authors: "Autor: Nathan Sodré",
     link: "https://wj855f.csb.app/",
   },
   {
@@ -39,7 +35,6 @@ const projectsDev = [
     description:
       "Sistema Integrado de Gestão foi desenvolvido sob medida para a administração de compra e venda de créditos para jogadores de Poker online. Implementado em Angular13 & NestJS.",
     image: "/images/dimenor.png",
-    authors: "Autor: Cassio Fachinelli",
     link: "https://dimenorfichas.com",
   },
   {
@@ -47,7 +42,6 @@ const projectsDev = [
     description:
       "Calculadora NS é uma calculadora online que realiza operações matemáticas básicas. Implementado em React.js usando o framework Styled Components.",
     image: "/images/calculadorans.png",
-    authors: "Autor: Nathan Sodré",
     link: "https://calculadora-vnw-nu.vercel.app",
   },
 ];
@@ -58,7 +52,6 @@ const projectsUX = [
     description:
       "Responsável por todos processos de design, métricas e metas em um squad onde foi desenvolvido um gerenciador financeiro.",
     image: "/images/thekeempresas.png",
-    authors: "Autora: Jenifer Maciel",
     link: "https://jeennymaciel.wixsite.com/meusite/theke",
   },
   {
@@ -66,7 +59,6 @@ const projectsUX = [
     description:
       "A Teze decidiu investir em um novo aplicativo para auxiliar os usuários com as suas contas mensais.",
     image: "/images/saldopositivo.png",
-    authors: "Autora: Jenifer Maciel",
     link: "https://jeennymaciel.wixsite.com/meusite/c%C3%B3pia-dsg-group",
   },
 ];
@@ -75,13 +67,14 @@ export default function Home() {
   return (
     <Container>
       <Typography
-        variant="h3"
+        variant="h1"
         component="h1"
         gutterBottom
         align="center"
         mt={5}
+        style={{ fontFamily: "Courier New, monospace" }}
       >
-        4Labs Dev - Projetos
+        4Labs
       </Typography>
 
       {/* Seção de Projetos de Desenvolvimento */}
@@ -121,6 +114,17 @@ export default function Home() {
           </Grid>
         ))}
       </Grid>
+
+      {/* Footer */}
+      <Typography
+        variant="body2"
+        component="footer"
+        align="center"
+        mt={5}
+        mb={5}
+      >
+        Desenvolvido por 4Labs &copy; {new Date().getFullYear()}
+      </Typography>
     </Container>
   );
 }
