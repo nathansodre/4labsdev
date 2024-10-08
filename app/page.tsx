@@ -1,95 +1,126 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { Container, Typography, Grid } from "@mui/material";
+import ProjectCard from "../app/components/ProjectCard";
+
+const projectsDev = [
+  {
+    title: "Digital Stack Group",
+    description:
+      "Desde 2019, o Digital Stack Group conduz com maestria a intermediação entre os clientes aos principais jogos de poker no mundo, proporcionando segurança, suporte com vasta experiência e uma ampla variedade de jogos online. Implementado em Next.js e Tailwind.",
+    image: "/images/dsg.png",
+    authors: "Autor: Cassio Fachinelli, Nathan Sodré e Adriano Ribeiro.",
+    link: "https://digitalstackgroup.com",
+  },
+  {
+    title: "Klik Vapes",
+    description:
+      "Klik Vapes vende vapes descartáveis com uma proposta inovadora: dispositivos que podem ser combinados magneticamente para criar novas misturas de sabores. Com 10 opções de sabores e mais de 300 combinações possíveis, ele oferece uma experiência personalizada e interativa para os usuários. Implementado com os frameworks Next.js e Stitches",
+    image: "/images/klik.png",
+    authors: "Autor: Adriano Ribeiro",
+    link: "https://klik-vapes-dev.vercel.app/",
+  },
+  {
+    title: "Dedicando-se às Relações Humanas",
+    description:
+      "A Dedicando-se às Relações Humanas é uma empresa de RH que busca entender o propósito dos candidatos, aliando às demandas do mercado de trabalho. Implementado em Angular v14.",
+    image: "/images/drhs.png",
+    authors: "Autor: Cassio Fachinelli",
+    link: "https://drhs.com.br",
+  },
+  {
+    title: "Fantastika",
+    description:
+      "Este código é uma página web que representa o site da Fantastika, uma pet shop. A página foi desenvolvida utilizando tecnologias web padrão, como HTML e CSS.",
+    image: "/images/fantastika.png",
+    authors: "Autor: Nathan Sodré",
+    link: "https://wj855f.csb.app/",
+  },
+  {
+    title: "Dimenor Fichas",
+    description:
+      "Sistema Integrado de Gestão foi desenvolvido sob medida para a administração de compra e venda de créditos para jogadores de Poker online. Implementado em Angular13 & NestJS.",
+    image: "/images/dimenor.png",
+    authors: "Autor: Cassio Fachinelli",
+    link: "https://dimenorfichas.com",
+  },
+  {
+    title: "Calculadora NS",
+    description:
+      "Calculadora NS é uma calculadora online que realiza operações matemáticas básicas. Implementado em React.js usando o framework Styled Components.",
+    image: "/images/calculadorans.png",
+    authors: "Autor: Nathan Sodré",
+    link: "https://calculadora-vnw-nu.vercel.app",
+  },
+];
+
+const projectsUX = [
+  {
+    title: "Theke Empresas",
+    description:
+      "Responsável por todos processos de design, métricas e metas em um squad onde foi desenvolvido um gerenciador financeiro.",
+    image: "/images/thekeempresas.png",
+    authors: "Autora: Jenifer Maciel",
+    link: "https://jeennymaciel.wixsite.com/meusite/theke",
+  },
+  {
+    title: "Novo App - Saldo Positivo",
+    description:
+      "A Teze decidiu investir em um novo aplicativo para auxiliar os usuários com as suas contas mensais.",
+    image: "/images/saldopositivo.png",
+    authors: "Autora: Jenifer Maciel",
+    link: "https://jeennymaciel.wixsite.com/meusite/c%C3%B3pia-dsg-group",
+  },
+];
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <Container>
+      <Typography
+        variant="h3"
+        component="h1"
+        gutterBottom
+        align="center"
+        mt={5}
+      >
+        4Labs Dev - Projetos
+      </Typography>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      {/* Seção de Projetos de Desenvolvimento */}
+      <Typography
+        variant="h4"
+        component="h2"
+        gutterBottom
+        mt={5}
+        mb={5}
+        align="center"
+      >
+        Projetos de Desenvolvimento
+      </Typography>
+      <Grid container spacing={4}>
+        {projectsDev.map((project, index) => (
+          <Grid item xs={12} md={6} key={index}>
+            <ProjectCard {...project} />
+          </Grid>
+        ))}
+      </Grid>
+
+      {/* Seção de Projetos de Design UX */}
+      <Typography
+        variant="h4"
+        component="h2"
+        gutterBottom
+        mt={5}
+        mb={5}
+        align="center"
+      >
+        Projetos de Design UX
+      </Typography>
+      <Grid container spacing={4}>
+        {projectsUX.map((project, index) => (
+          <Grid item xs={12} md={6} key={index}>
+            <ProjectCard {...project} />
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
   );
 }
